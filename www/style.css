@@ -1,6 +1,18 @@
+:root{
+    --Main: #005766;
+    --Backgroudn: #00d9ff21;
+    --White: rgb(255, 255, 255);
+    --Extra: rgb(134, 237, 255, 0.5);
+}
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
 .kalkulacka{
     display: grid;
-    background-color: rgb(69, 72, 73);
     width: 40%;
     height: 80vh;
     margin: 0 auto;
@@ -9,19 +21,57 @@
     column-gap: 0.25em;
     row-gap: 0.25em;
     padding: 0.5em;
+    border-radius: 1em;
+    border: 10px white soloi;
     
 }
 #display{
-    color: rgb(53, 53, 53);
-    background-color: rgb(209, 209, 209);
+    color: white;
+    background-color: var(--Extra);
     grid-column-start: 1;
     grid-column-end: 5;
     text-align: right;
     padding: 2em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+#main{
+    font-size: 1.75em;
+}
+#sub{
+    font-size: 1.25;
 }
 
 button{
     border: none;
-    background-color: whitesmoke;
+    color: white;
+    background-color: var(--Main);
     font-size: 1.5em;
+}
+
+button:hover{
+    background-color: var(--Extra);
+}
+#plusminus{
+    border-bottom-left-radius: 1em;
+}
+#result{
+    border-bottom-right-radius: 1em;
+}
+
+body{
+    background-image: url(/abstract-ga224b4490_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    background-color: #005766ee;
+    ;
+    height: 100vh;
+    padding: 1em;
+}
+
+h1{
+    color: white;
 }
