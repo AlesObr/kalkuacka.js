@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="/script.js"></script>
@@ -12,17 +13,17 @@
     <div class="container">
         <h1>Kalkulačka</h1>
         <div class="kalkulacka">
-            <div id="display">
-                <div id="main"></div>
-                <div id="sub"></div>
-            </div>
+                <div id="display">
+                    <div id="main"></div>
+                    <div id="sub"></div>
+                </div>
             <button id="%" value="%" onclick="">%</button>
             <button id="CE" value="CE" onclick="vymazNum2()">CE</button>
             <button id="C" value="C" onclick="vymaz()">C</button>
             <button id="bcs" value="bcs" onclick="">BCS</button>
-            <button id="1x" onclick="">1/x</button>
-            <button id="x2" onclick="">x^2</button>
-            <button id="odmocnina" onclick="">√x</button>
+            <button id="1x" onclick="zlomkovac()">1/x</button>
+            <button id="x2" onclick="umocnit()">x^2</button>
+            <button id="odmocnina" onclick="odmocnit()">√x</button>
             <button id="deleno" onclick="del()">÷</button>
             <button id="7" onclick="addNumber(7)">7</button>
             <button id="8" onclick="addNumber(8)">8</button>
@@ -38,7 +39,7 @@
             <button id="+" onclick="secti()">+</button>
             <button id="plusminus" onclick="">+/-</button>
             <button id="nula" onclick="addNumber(0)">0</button>
-            <button id="dot" onclick="">,</button>
+            <button id="dot" onclick="addNumber('.')">,</button>
             <button id="result" onclick="res()">=</button>
         </div>
     </div>

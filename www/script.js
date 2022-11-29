@@ -18,24 +18,37 @@ function doOperation(){
     switch(operation){
         case "minus":
             number1 = Number(number1) - Number(number2);
-            document.getElementById("sub").innerHTML = number1;
+            document.getElementById("main").innerHTML = number1;
             number2 = "";
             break;
         case "plus":
             number1 = Number(number1) + Number(number2);
-            document.getElementById("sub").innerHTML = number1;
+            document.getElementById("main").innerHTML = number1;
             number2 = "";
             break;
         case "krat":
             number1 = Number(number1) * Number(number2);
-            document.getElementById("sub").innerHTML = number1;
+            document.getElementById("main").innerHTML = number1;
             number2 = "";
             break;
         case "deleno":
             number1 = Number(number1) / Number(number2);
-            document.getElementById("sub").innerHTML = number1;
+            document.getElementById("main").innerHTML = number1;
             number2 = "";
             break;
+        case "umocnit":
+            number1 = Math.pow(Number(number1), 2);
+            document.getElementById("main").innerHTML = number1;
+            number2 = "";
+            break;
+        case "odmocnit":
+            number1 = Math.sqrt(Number(number1), 2);
+            document.getElementById("main").innerHTML = number1;
+            break;
+        case "zlomek":
+            number1 = 1/Number(number1);
+            document.getElementById("main").innerHTML = number1;
+            break
 }
 }
 
@@ -77,8 +90,8 @@ function del(){
 
 function res(){
     doOperation();
-    number1 = "";
     document.getElementById("main").innerHTML = number1;
+    number2 = "";
     operation = "";
 }
 
@@ -91,4 +104,25 @@ function vymaz(){
     number2 = ""
     document.getElementById("sub").innerHTML = number1;
     document.getElementById("main").innerHTML = number2;
+}
+
+function umocnit(){
+    operation = "umocnit";
+    doOperation();
+    operation = "";
+}
+
+function odmocnit(){
+    operation = "odmocnit";
+    doOperation();
+    operation = "";
+}
+
+function zlomkovac(){
+    operation = "zlomek";
+    doOperation();
+    operation = "";
+}
+function hide(){
+    document.getElementById("display").style.visibility ="hidden"
 }

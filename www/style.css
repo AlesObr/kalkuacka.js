@@ -2,7 +2,7 @@
     --Main: #005766;
     --Backgroudn: #00d9ff21;
     --White: rgb(255, 255, 255);
-    --Extra: rgb(134, 237, 255, 0.5);
+    --Extra: rgba(104, 179, 192, 0.5);
 }
 
 *{
@@ -22,7 +22,7 @@
     row-gap: 0.25em;
     padding: 0.5em;
     border-radius: 1em;
-    border: 10px white soloi;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.185);
     
 }
 #display{
@@ -34,6 +34,7 @@
     padding: 2em;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.185);
 }
 
 #main{
@@ -48,10 +49,15 @@ button{
     color: white;
     background-color: var(--Main);
     font-size: 1.5em;
+    border: var(--Extra) solid 1px;
+    
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.185);
 }
 
 button:hover{
     background-color: var(--Extra);
+    
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.185);
 }
 #plusminus{
     border-bottom-left-radius: 1em;
