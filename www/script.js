@@ -127,6 +127,67 @@ function hide(){
     document.getElementById("display").style.visibility ="hidden"
 }
 
-$("0").click(function(){
-    addNumber(0);
+
+$(document).ready(function(){
+    console.log("načteno")
+    $("#nula").click(function(){
+        addNumber(0);
+    })
+    $("#one").click(function(){
+        addNumber(1);
+    })
+    $("#two").click(function(){
+        addNumber(2);
+    })
+    $("#three").click(function(){
+        addNumber(3);
+    })
+    $("#four").click(function(){
+        addNumber(4);
+    })
+    $("#five").click(function(){
+        addNumber(5);
+    })
+    $("#six").click(function(){
+        addNumber(6);
+    })
+    $("#seven").click(function(){
+        addNumber(7);
+    })
+    $("#eight").click(function(){
+        addNumber(8);
+    })
+    $("#nine").click(function(){
+        addNumber(9);
+    })
+    $("#dot").click(function(){
+        addNumber(".");
+    })
+    $("#C").click(function(){
+        vymaz();
+    })
+    $("#deleno").click(function(){
+        del();
+    })
+    $("#krat").click(function(){
+        nasob();
+    })
+    $("#minus").click(function(){
+        odecti();
+    })
+    $("#result").click(function(){
+        res();
+    })
+    $("#plus").click(function(){
+        secti();
+    })
+    $("#1x").click(function(){
+        zlomkovac();
+    })
+    $("#x2").click(function(){
+        umocnit();
+    })
+    $("#odmocnina").click(function(){
+        odmocnit();
+    })
 })
