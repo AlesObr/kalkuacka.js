@@ -1,8 +1,8 @@
 :root{
-    --Main: #005766;
-    --Backgroudn: #00d9ff21;
+    --Main: #121b1d;
+    --Backgroudn: #0b222521;
     --White: rgb(255, 255, 255);
-    --Extra: rgba(104, 179, 192, 0.5);
+    --Extra: rgba(0, 0, 0, 0.5);
 }
 
 *{
@@ -13,14 +13,11 @@
 
 .kalkulacka{
     display: grid;
-    width: 40%;
+    width: 450px;
     height: 80vh;
     margin: 0 auto;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 0.25em;
-    row-gap: 0.25em;
-    padding: 0.5em;
     border-radius: 1em;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.185);
     
@@ -30,11 +27,12 @@
     background-color: var(--Extra);
     grid-column-start: 1;
     grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
     text-align: right;
     padding: 2em;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.185);
 }
 
 #main{
@@ -50,14 +48,12 @@ button{
     background-color: var(--Main);
     font-size: 1.5em;
     border: var(--Extra) solid 1px;
-    
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.185);
 }
 
 button:hover{
     background-color: var(--Extra);
     
-    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.185);
+    box-shadow: 5px 2px 5px rgb(56, 56, 56);
 }
 #plusminus{
     border-bottom-left-radius: 1em;
@@ -67,15 +63,8 @@ button:hover{
 }
 
 body{
-    background-image: url(/abstract-ga224b4490_1920.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.container{
-    background-color: #005766ee;
-    ;
-    height: 100vh;
-    padding: 1em;
+    padding: 2em;
+    background-color: #3d3d3dee;
 }
 
 h1{
