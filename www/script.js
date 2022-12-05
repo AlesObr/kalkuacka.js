@@ -126,3 +126,7 @@ function zlomkovac(){
 function hide(){
     document.getElementById("display").style.visibility ="hidden"
 }
+
+$("0").click(function(){
+    addNumber(0);
+})
