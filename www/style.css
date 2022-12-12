@@ -70,3 +70,16 @@ body{
 h1{
     color: white;
 }
+
+#result{
+    background-color: rgb(255, 187, 0);
+}
+#result:hover{
+    background-color: rgb(255, 207, 75);
+}
+header{
+    padding: 2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

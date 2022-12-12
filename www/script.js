@@ -190,4 +190,14 @@ $(document).ready(function(){
     $("#odmocnina").click(function(){
         odmocnit();
     })
+    $("#plusminus").click(function(){
+        if(operation == ""){
+            number1 = Number(number1)*-1
+            document.getElementById("main").innerHTML = number1;
+        }
+        else{
+            number2 = Number(number2)*-1
+            document.getElementById("main").innerHTML = number2;
+        }
+    })
 })
