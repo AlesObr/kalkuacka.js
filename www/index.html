@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <h1>Jquery kalkulačka</h1>
-            <p>UI V 2.0</p>
+            <p>UI V 2.2.1</p>
         </header>
         <div class="kalkulacka">
                 <div id="display">
@@ -24,7 +24,7 @@
             <button id="%" value="%" >%</button>
             <button id="CE" value="CE" >CE</button>
             <button id="C" value="C" >C</button>
-            <button id="bcs" value="bcs" >BCS</button>
+            <button id="plusminus">+/-</button>
             <button id="1x" >1/x</button>
             <button id="x2" >x^2</button>
             <button id="odmocnina" >√x</button>
@@ -41,14 +41,21 @@
             <button id="two">2</button>
             <button id="three" value="3">3</button>
             <button id="plus">+</button>
-            <button id="plusminus">+/-</button>
             <button id="nula">0</button>
             <button id="dot">,</button>
             <button id="result">=</button>
         </div>
     </div>
     <div id="stat">
+        <table class="table">
+            <tr>
+                <th>Tlačítko</th>
+                <th>Stisknuto</th>
+            </tr>
+            <tbody id="body">
 
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

@@ -10,8 +10,17 @@ function sent(tlacitko){
         dataType: "json"
     })
     .done(function(res){
-        var ret = JSON.stringify(res)
-        document.getElementById("stat").innerHTML = ret;
+        document.getElementById("body").innerHTML = "";
+        Object.keys(res).forEach(function(key) {
+            const row = document.createElement("tr");
+            const el1 = document.createElement("td")
+            const el2 =document.createElement("td")
+            el1.innerHTML = key;
+            el2.innerHTML = res[key];
+            row.appendChild(el1);
+            row.appendChild(el2);
+            document.getElementById("body").appendChild(row);
+          })
     })
 }
 
