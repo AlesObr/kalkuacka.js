@@ -2,8 +2,22 @@ var number1 = ""
 var number2 = ""
 var operation = "";
 
+function sent(tlacitko){
+    $.ajax({
+        url: "/api",
+        data: {"tlacitko": tlacitko},
+        method: "POST",
+        dataType: "json"
+    })
+    .done(function(res){
+        var ret = JSON.stringify(res)
+        document.getElementById("stat").innerHTML = ret;
+    })
+}
+
 function addNumber(val){
     val = String(val)
+    sent(val)
     if(operation == ""){
         number1 = number1 + val
         document.getElementById("main").innerHTML = number1;
@@ -15,6 +29,7 @@ function addNumber(val){
 }
 
 function doOperation(){
+    sent(operation);
     switch(operation){
         case "minus":
             number1 = Number(number1) - Number(number2);
@@ -89,6 +104,7 @@ function del(){
 }
 
 function res(){
+    sent("rovná-se");
     doOperation();
     document.getElementById("main").innerHTML = number1;
     number2 = "";
@@ -96,10 +112,12 @@ function res(){
 }
 
 function vymazNum2(){
+    sent("vymazat");
     number2 = ""
 }
 
 function vymaz(){
+    sent("vymazat");
     number1 = "";
     number2 = ""
     document.getElementById("sub").innerHTML = number1;
@@ -107,18 +125,21 @@ function vymaz(){
 }
 
 function umocnit(){
+    sent("umocnit");
     operation = "umocnit";
     doOperation();
     operation = "";
 }
 
 function odmocnit(){
+    sent("odmocnit");
     operation = "odmocnit";
     doOperation();
     operation = "";
 }
 
 function zlomkovac(){
+    sent("zlomek");
     operation = "zlomek";
     doOperation();
     operation = "";
@@ -126,6 +147,7 @@ function zlomkovac(){
 function hide(){
     document.getElementById("display").style.visibility ="hidden"
 }
+
 
 
 $(document).ready(function(){
